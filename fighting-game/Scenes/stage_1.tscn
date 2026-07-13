@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://5c647muia24l"]
+
+[ext_resource type="Texture2D" uid="uid://b80veo7yb7rcp" path="res://Art/enviornment/wall.png" id="1_v1qfn"]
+[ext_resource type="PackedScene" uid="uid://ctgxpfuyyoyfn" path="res://Scenes/player.tscn" id="2_hh5uf"]
+[ext_resource type="Texture2D" uid="uid://b2418djw0h16i" path="res://Art/enviornment/pillar.png" id="3_us22l"]
+[ext_resource type="Texture2D" uid="uid://x0vk8bm83fb3" path="res://Art/enviornment/pillar_base_t.png" id="4_ow18i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ial8x"]
+size = Vector2(6047.25, 513.5)
+
+[node name="Stage1" type="Node2D" unique_id=534365376]
+
+[node name="Knight" parent="." unique_id=828705993 instance=ExtResource("2_hh5uf")]
+position = Vector2(1934, 389)
+
+[node name="Pillar" type="RigidBody2D" parent="." unique_id=1293693734]
+position = Vector2(1145, 409)
+disable_mode = 1
+mass = 1000.0
+freeze = true
+
+[node name="PillarSprite" type="Sprite2D" parent="Pillar" unique_id=994050680]
+texture_filter = 1
+position = Vector2(-177.99998, -138)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite4" type="Sprite2D" parent="Pillar" unique_id=1645424637]
+texture_filter = 1
+position = Vector2(-178, -520)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite5" type="Sprite2D" parent="Pillar" unique_id=545700819]
+texture_filter = 1
+position = Vector2(-178, -710)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite6" type="Sprite2D" parent="Pillar" unique_id=532277485]
+texture_filter = 1
+position = Vector2(-178, -900)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite3" type="Sprite2D" parent="Pillar" unique_id=630906040]
+texture_filter = 1
+position = Vector2(-178, -330)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite2" type="Sprite2D" parent="Pillar" unique_id=2032572686]
+texture_filter = 1
+position = Vector2(-178, 60)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarBaseT" type="Sprite2D" parent="Pillar" unique_id=1862401534]
+texture_filter = 1
+position = Vector2(-186.625, 194)
+scale = Vector2(6.9656878, 9.722222)
+texture = ExtResource("4_ow18i")
+
+[node name="PillarBaseT2" type="Sprite2D" parent="Pillar" unique_id=541617202]
+texture_filter = 1
+position = Vector2(-187.99994, -1038)
+scale = Vector2(6.966, -9.722)
+texture = ExtResource("4_ow18i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pillar" unique_id=88667769]
+polygon = PackedVector2Array(-387, 246, 4, 245, -64, 159, -73, -1002, -11, -1076, -365, -1076, -295, -1000, -294, 159)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1034121807]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1672906469]
+position = Vector2(3341.375, 904)
+shape = SubResource("RectangleShape2D_ial8x")
+
+[node name="Wall6" type="Sprite2D" parent="RigidBody2D" unique_id=639745824]
+texture_filter = 1
+position = Vector2(941, 942.99994)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="Wall13" type="Sprite2D" parent="RigidBody2D" unique_id=237832508]
+texture_filter = 1
+position = Vector2(-259, 943)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="Wall14" type="Sprite2D" parent="RigidBody2D" unique_id=1735693056]
+texture_filter = 1
+position = Vector2(-1459, 943)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="Wall7" type="Sprite2D" parent="RigidBody2D" unique_id=2118596627]
+texture_filter = 1
+position = Vector2(2141, 942.99994)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="Wall8" type="Sprite2D" parent="RigidBody2D" unique_id=538889070]
+texture_filter = 1
+position = Vector2(3341, 942.99994)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="Wall9" type="Sprite2D" parent="RigidBody2D" unique_id=341709895]
+texture_filter = 1
+position = Vector2(4541, 942.99994)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="Wall10" type="Sprite2D" parent="RigidBody2D" unique_id=366309893]
+texture_filter = 1
+position = Vector2(5741, 942.99994)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="Wall11" type="Sprite2D" parent="RigidBody2D" unique_id=828003867]
+texture_filter = 1
+position = Vector2(6941.2, 943)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="Wall12" type="Sprite2D" parent="RigidBody2D" unique_id=1303682079]
+texture_filter = 1
+position = Vector2(8141.2, 943)
+scale = Vector2(15.525, 18.25)
+texture = ExtResource("1_v1qfn")
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D" unique_id=1334481913]
+offset_left = -2080.0
+offset_top = 1223.0
+offset_right = 8769.0
+offset_bottom = 1894.0
+color = Color(0.11, 0.11, 0.11, 1)
+
+[node name="Pillar2" type="RigidBody2D" parent="." unique_id=640956935]
+position = Vector2(5628, 415)
+disable_mode = 1
+mass = 1000.0
+freeze = true
+
+[node name="PillarSprite" type="Sprite2D" parent="Pillar2" unique_id=1819262117]
+texture_filter = 1
+position = Vector2(-177.99998, -138)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite4" type="Sprite2D" parent="Pillar2" unique_id=2008034205]
+texture_filter = 1
+position = Vector2(-178, -520)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite5" type="Sprite2D" parent="Pillar2" unique_id=101585226]
+texture_filter = 1
+position = Vector2(-178, -710)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite6" type="Sprite2D" parent="Pillar2" unique_id=371098951]
+texture_filter = 1
+position = Vector2(-178, -900)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite3" type="Sprite2D" parent="Pillar2" unique_id=869988844]
+texture_filter = 1
+position = Vector2(-178, -330)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarSprite2" type="Sprite2D" parent="Pillar2" unique_id=460151858]
+texture_filter = 1
+position = Vector2(-178, 60)
+scale = Vector2(6.96875, 6.1875)
+texture = ExtResource("3_us22l")
+
+[node name="PillarBaseT" type="Sprite2D" parent="Pillar2" unique_id=542393204]
+texture_filter = 1
+position = Vector2(-186.625, 194)
+scale = Vector2(6.9656878, 9.722222)
+texture = ExtResource("4_ow18i")
+
+[node name="PillarBaseT2" type="Sprite2D" parent="Pillar2" unique_id=1442529480]
+texture_filter = 1
+position = Vector2(-187.99994, -1038)
+scale = Vector2(6.966, -9.722)
+texture = ExtResource("4_ow18i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pillar2" unique_id=1191322932]
+polygon = PackedVector2Array(-387, 246, 4, 245, -64, 159, -73, -1002, -11, -1076, -365, -1076, -295, -1000, -294, 159)

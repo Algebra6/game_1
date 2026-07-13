@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://ctgxpfuyyoyfn"]
+
+[ext_resource type="Texture2D" uid="uid://brtqrg6mdq25h" path="res://Art/Knight/idle/Knight_idle_01.png" id="1_k3ug5"]
+[ext_resource type="Script" uid="uid://dc7lue0h7rr2" path="res://Scripts/player_controller.gd" id="1_tai8l"]
+[ext_resource type="Script" uid="uid://fj7cvc51g0qa" path="res://Scripts/player_animator.gd" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://dg4fik3ghofqx" path="res://Art/Knight/idle/Knight_idle_02.png" id="4_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://sweetbd8fm47" path="res://Art/Knight/idle/Knight_idle_03.png" id="5_3smsa"]
+[ext_resource type="Texture2D" uid="uid://bterv4pcexmn" path="res://Art/Knight/idle/Knight_idle_04.png" id="6_8erm5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tai8l"]
+size = Vector2(121, 151)
+
+[sub_resource type="Animation" id="Animation_f1ek2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_k3ug5")]
+}
+
+[sub_resource type="Animation" id="Animation_tx1dd"]
+resource_name = "knight_idle"
+length = 0.56666666
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666668, 0.16666667, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_k3ug5"), ExtResource("4_x3wgy"), ExtResource("5_3smsa"), ExtResource("6_8erm5"), ExtResource("5_3smsa")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gymyn"]
+_data = {
+&"RESET": SubResource("Animation_f1ek2"),
+&"knight_idle": SubResource("Animation_tx1dd")
+}
+
+[node name="Knight" type="CharacterBody2D" unique_id=828705993 node_paths=PackedStringArray("camera")]
+script = ExtResource("1_tai8l")
+speed = 30.0
+jump_power = 70.0
+camera = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=986295408]
+position = Vector2(268, 171)
+zoom = Vector2(0.53, 0.53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1347495003]
+position = Vector2(251.5, 174.5)
+shape = SubResource("RectangleShape2D_tai8l")
+
+[node name="PlayerAnimator" type="Node2D" parent="." unique_id=469884492 node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
+script = ExtResource("2_6t5aa")
+player_controller = NodePath("..")
+animation_player = NodePath("AnimationPlayer")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerAnimator" unique_id=772702096]
+position = Vector2(258, 127)
+texture = ExtResource("1_k3ug5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimator" unique_id=97883533]
+libraries/ = SubResource("AnimationLibrary_gymyn")
