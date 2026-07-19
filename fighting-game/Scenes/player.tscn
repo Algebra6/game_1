@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://dg4fik3ghofqx" path="res://Art/Knight/idle/Knight_idle_02.png" id="4_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://sweetbd8fm47" path="res://Art/Knight/idle/Knight_idle_03.png" id="5_3smsa"]
 [ext_resource type="Texture2D" uid="uid://bterv4pcexmn" path="res://Art/Knight/idle/Knight_idle_04.png" id="6_8erm5"]
+[ext_resource type="Texture2D" uid="uid://dfdhj5prsbm2w" path="res://Art/Knight/walk/Knight_walk_01.png" id="7_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://da6hvhpbv1str" path="res://Art/Knight/jump/Knight_jump_01.png" id="8_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://f3gk8gj44r8" path="res://Art/Knight/jump/Knight_jump_02.png" id="8_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://c4kwhnngakhdc" path="res://Art/Knight/walk/Knight_walk_02.png" id="8_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://d0sj0bxir2sch" path="res://Art/Knight/walk/Knight_walk_03.png" id="9_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://c0w80y6gka7mg" path="res://Art/Knight/walk/Knight_walk_04.png" id="10_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://p7o8jvebt14q" path="res://Art/Knight/walk/Knight_walk_05.png" id="11_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://bjywftlu5a6pl" path="res://Art/Knight/walk/Knight_walk_06.png" id="12_qqcod"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tai8l"]
 size = Vector2(121, 151)
@@ -27,7 +35,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_tx1dd"]
 resource_name = "knight_idle"
-length = 0.56666666
+length = 0.9
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -36,16 +44,51 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.06666668, 0.16666667, 0.3, 0.4, 0.5),
+"times": PackedFloat32Array(0.06666668, 0.23333333, 0.36666667, 0.53333336, 0.73333335),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("1_k3ug5"), ExtResource("4_x3wgy"), ExtResource("5_3smsa"), ExtResource("6_8erm5"), ExtResource("5_3smsa")]
 }
 
+[sub_resource type="Animation" id="Animation_fd4e3"]
+resource_name = "jump"
+length = 0.16666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_h4iuc"), ExtResource("8_7dp3o")]
+}
+
+[sub_resource type="Animation" id="Animation_igrcy"]
+resource_name = "knight_walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14294124, 0.32612807, 0.5218049, 0.7147062, 0.8631986),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_pu2lt"), ExtResource("8_ukyrk"), ExtResource("9_7dp3o"), ExtResource("10_h4iuc"), ExtResource("11_fd4e3"), ExtResource("12_qqcod")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gymyn"]
 _data = {
 &"RESET": SubResource("Animation_f1ek2"),
-&"knight_idle": SubResource("Animation_tx1dd")
+&"knight_idle": SubResource("Animation_tx1dd"),
+&"knight_jump": SubResource("Animation_fd4e3"),
+&"knight_walk": SubResource("Animation_igrcy")
 }
 
 [node name="Knight" type="CharacterBody2D" unique_id=828705993 node_paths=PackedStringArray("camera")]
