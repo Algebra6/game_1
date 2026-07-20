@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg4fik3ghofqx"
-path="res://.godot/imported/Knight_idle_02.png-6b511de9dd35dae8a22ebfb66981707b.ctex"
+uid="uid://05k7y4qmv070"
+path="res://.godot/imported/ceiling.png-846770ec189f0795aaec635a68723aa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Knight/idle/Knight_idle_02.png"
-dest_files=["res://.godot/imported/Knight_idle_02.png-6b511de9dd35dae8a22ebfb66981707b.ctex"]
+source_file="res://Art/FG/enviornment/ceiling.png"
+dest_files=["res://.godot/imported/ceiling.png-846770ec189f0795aaec635a68723aa5.ctex"]
 
 [params]
 

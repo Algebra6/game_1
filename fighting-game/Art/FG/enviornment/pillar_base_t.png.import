@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da6hvhpbv1str"
-path="res://.godot/imported/Knight_jump_01.png-3cef2a1356aee5e08e04c6c764e43cd0.ctex"
+uid="uid://x0vk8bm83fb3"
+path="res://.godot/imported/pillar_base_t.png-a7eed611071c616e21fc6e4c24169e64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Knight/jump/Knight_jump_01.png"
-dest_files=["res://.godot/imported/Knight_jump_01.png-3cef2a1356aee5e08e04c6c764e43cd0.ctex"]
+source_file="res://Art/FG/enviornment/pillar_base_t.png"
+dest_files=["res://.godot/imported/pillar_base_t.png-a7eed611071c616e21fc6e4c24169e64.ctex"]
 
 [params]
 

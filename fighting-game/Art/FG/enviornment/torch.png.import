@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjlpa8x326vle"
-path="res://.godot/imported/Knight_idle_05.png-bf1f7135c70594adf8a0c56cf5fcacd9.ctex"
+uid="uid://cxx7n23u0ir4n"
+path="res://.godot/imported/torch.png-93a485347d1c612e1b90471c15c165be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Knight/idle/Knight_idle_05.png"
-dest_files=["res://.godot/imported/Knight_idle_05.png-bf1f7135c70594adf8a0c56cf5fcacd9.ctex"]
+source_file="res://Art/FG/enviornment/torch.png"
+dest_files=["res://.godot/imported/torch.png-93a485347d1c612e1b90471c15c165be.ctex"]
 
 [params]
 

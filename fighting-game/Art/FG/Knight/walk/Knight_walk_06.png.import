@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2418djw0h16i"
-path="res://.godot/imported/pillar.png-61cf732d9b99ef60ff7b66d54fc3821d.ctex"
+uid="uid://bjywftlu5a6pl"
+path="res://.godot/imported/Knight_walk_06.png-df630e8ebcc8173c495f0c25b501fabe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/enviornment/pillar.png"
-dest_files=["res://.godot/imported/pillar.png-61cf732d9b99ef60ff7b66d54fc3821d.ctex"]
+source_file="res://Art/FG/Knight/walk/Knight_walk_06.png"
+dest_files=["res://.godot/imported/Knight_walk_06.png-df630e8ebcc8173c495f0c25b501fabe.ctex"]
 
 [params]
 

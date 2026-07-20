@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p7o8jvebt14q"
-path="res://.godot/imported/Knight_walk_05.png-4a0f76a56032d88ee9626ba45c3f9f46.ctex"
+uid="uid://f3gk8gj44r8"
+path="res://.godot/imported/Knight_jump_02.png-1ba06d680ee9c3a70dc62303eb29b8f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Knight/walk/Knight_walk_05.png"
-dest_files=["res://.godot/imported/Knight_walk_05.png-4a0f76a56032d88ee9626ba45c3f9f46.ctex"]
+source_file="res://Art/FG/Knight/jump/Knight_jump_02.png"
+dest_files=["res://.godot/imported/Knight_jump_02.png-1ba06d680ee9c3a70dc62303eb29b8f9.ctex"]
 
 [params]
 
