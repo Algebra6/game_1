@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drleidycepi4v"
-path="res://.godot/imported/Knight_idle_06.png-281e27376638c6f0f0512ff1480ef2f0.ctex"
+uid="uid://da6hvhpbv1str"
+path="res://.godot/imported/Knight_jump_01.png-e7da00d8e6dd681d7a7777fa3c20efe7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Knight/idle/Knight_idle_06.png"
-dest_files=["res://.godot/imported/Knight_idle_06.png-281e27376638c6f0f0512ff1480ef2f0.ctex"]
+source_file="res://Art/FG/Knight/jump/Knight_jump_01.png"
+dest_files=["res://.godot/imported/Knight_jump_01.png-e7da00d8e6dd681d7a7777fa3c20efe7.ctex"]
 
 [params]
 

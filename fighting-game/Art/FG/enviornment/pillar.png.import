@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4pe40xbgo5ey"
-path="res://.godot/imported/door_t.png-e6210cd2daebdc925900820f3331cd16.ctex"
+uid="uid://b2418djw0h16i"
+path="res://.godot/imported/pillar.png-c50aaf1f2d3481d8ec69e725530a5b11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/enviornment/door_t.png"
-dest_files=["res://.godot/imported/door_t.png-e6210cd2daebdc925900820f3331cd16.ctex"]
+source_file="res://Art/FG/enviornment/pillar.png"
+dest_files=["res://.godot/imported/pillar.png-c50aaf1f2d3481d8ec69e725530a5b11.ctex"]
 
 [params]
 

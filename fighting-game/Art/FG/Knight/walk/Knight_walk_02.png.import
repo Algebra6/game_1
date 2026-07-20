@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://05k7y4qmv070"
-path="res://.godot/imported/ceiling.png-fb1ae5919da0bdf45e922395f78b8550.ctex"
+uid="uid://c4kwhnngakhdc"
+path="res://.godot/imported/Knight_walk_02.png-b80cde4db20baf42d14dbc227e54bbf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/enviornment/ceiling.png"
-dest_files=["res://.godot/imported/ceiling.png-fb1ae5919da0bdf45e922395f78b8550.ctex"]
+source_file="res://Art/FG/Knight/walk/Knight_walk_02.png"
+dest_files=["res://.godot/imported/Knight_walk_02.png-b80cde4db20baf42d14dbc227e54bbf7.ctex"]
 
 [params]
 

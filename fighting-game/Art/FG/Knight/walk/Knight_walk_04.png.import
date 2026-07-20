@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brtqrg6mdq25h"
-path="res://.godot/imported/Knight_idle_01.png-183c41c35e1cca7ecf76bcdfdba7ac15.ctex"
+uid="uid://c0w80y6gka7mg"
+path="res://.godot/imported/Knight_walk_04.png-893ec5d769104f5b2de10517b8527507.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Knight/idle/Knight_idle_01.png"
-dest_files=["res://.godot/imported/Knight_idle_01.png-183c41c35e1cca7ecf76bcdfdba7ac15.ctex"]
+source_file="res://Art/FG/Knight/walk/Knight_walk_04.png"
+dest_files=["res://.godot/imported/Knight_walk_04.png-893ec5d769104f5b2de10517b8527507.ctex"]
 
 [params]
 

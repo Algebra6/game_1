@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x0vk8bm83fb3"
-path="res://.godot/imported/pillar_base_t.png-e7e49cc72ced2c308849bd52275fd786.ctex"
+uid="uid://drleidycepi4v"
+path="res://.godot/imported/Knight_idle_06.png-acab3004f354abaa6b356d39e0cee062.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/enviornment/pillar_base_t.png"
-dest_files=["res://.godot/imported/pillar_base_t.png-e7e49cc72ced2c308849bd52275fd786.ctex"]
+source_file="res://Art/FG/Knight/idle/Knight_idle_06.png"
+dest_files=["res://.godot/imported/Knight_idle_06.png-acab3004f354abaa6b356d39e0cee062.ctex"]
 
 [params]
 
