@@ -3,17 +3,24 @@
 [ext_resource type="Texture2D" uid="uid://brtqrg6mdq25h" path="res://Art/FG/Knight/idle/Knight_idle_01.png" id="1_k3ug5"]
 [ext_resource type="Script" uid="uid://dc7lue0h7rr2" path="res://Scripts/FG/player_controller.gd" id="1_tai8l"]
 [ext_resource type="Script" uid="uid://fj7cvc51g0qa" path="res://Scripts/FG/player_animator.gd" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://cumxb2o81avnh" path="res://Art/FG/Knight/attack/Knight_attack_01.png" id="4_w8wgg"]
 [ext_resource type="Texture2D" uid="uid://dg4fik3ghofqx" path="res://Art/FG/Knight/idle/Knight_idle_02.png" id="4_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://sweetbd8fm47" path="res://Art/FG/Knight/idle/Knight_idle_03.png" id="5_3smsa"]
+[ext_resource type="Texture2D" uid="uid://c2jqrr11hwvbd" path="res://Art/FG/Knight/attack/Knight_attack_02.png" id="5_4bvnc"]
 [ext_resource type="Texture2D" uid="uid://bterv4pcexmn" path="res://Art/FG/Knight/idle/Knight_idle_04.png" id="6_8erm5"]
+[ext_resource type="Texture2D" uid="uid://dqfr5aipcmmuf" path="res://Art/FG/Knight/attack/Knight_attack_03.png" id="6_nd763"]
 [ext_resource type="Texture2D" uid="uid://dfdhj5prsbm2w" path="res://Art/FG/Knight/walk/Knight_walk_01.png" id="7_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://djitp2hggi284" path="res://Art/FG/Knight/attack/Knight_attack_04.png" id="7_w7y1f"]
 [ext_resource type="Texture2D" uid="uid://da6hvhpbv1str" path="res://Art/FG/Knight/jump/Knight_jump_01.png" id="8_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://f3gk8gj44r8" path="res://Art/FG/Knight/jump/Knight_jump_02.png" id="8_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://c4kwhnngakhdc" path="res://Art/FG/Knight/walk/Knight_walk_02.png" id="8_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://dpammurbluxc3" path="res://Art/FG/Knight/attack/Knight_attack_05.png" id="8_uuhd0"]
+[ext_resource type="Texture2D" uid="uid://wipqsc7ggpdd" path="res://Art/FG/Knight/attack/Knight_attack_06.png" id="9_6rwnm"]
 [ext_resource type="Texture2D" uid="uid://d0sj0bxir2sch" path="res://Art/FG/Knight/walk/Knight_walk_03.png" id="9_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://c0w80y6gka7mg" path="res://Art/FG/Knight/walk/Knight_walk_04.png" id="10_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://p7o8jvebt14q" path="res://Art/FG/Knight/walk/Knight_walk_05.png" id="11_fd4e3"]
 [ext_resource type="Texture2D" uid="uid://bjywftlu5a6pl" path="res://Art/FG/Knight/walk/Knight_walk_06.png" id="12_qqcod"]
+[ext_resource type="Texture2D" uid="uid://dyuk3k4tsnq0u" path="res://Art/FG/Knight/slash_effect/File1.png" id="15_akfvt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tai8l"]
 size = Vector2(121, 151)
@@ -31,6 +38,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("1_k3ug5")]
+}
+
+[sub_resource type="Animation" id="Animation_j2gsv"]
+resource_name = "knight_attack"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.033333335, 0.1, 0.23333333, 0.36666667, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_w8wgg"), ExtResource("5_4bvnc"), ExtResource("6_nd763"), ExtResource("7_w7y1f"), ExtResource("8_uuhd0"), ExtResource("9_6rwnm")]
 }
 
 [sub_resource type="Animation" id="Animation_tx1dd"]
@@ -86,10 +110,14 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gymyn"]
 _data = {
 &"RESET": SubResource("Animation_f1ek2"),
+&"knight_attack": SubResource("Animation_j2gsv"),
 &"knight_idle": SubResource("Animation_tx1dd"),
 &"knight_jump": SubResource("Animation_fd4e3"),
 &"knight_walk": SubResource("Animation_igrcy")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubqdv"]
+size = Vector2(464.6865, 152.75592)
 
 [node name="Knight" type="CharacterBody2D" unique_id=828705993 node_paths=PackedStringArray("camera")]
 script = ExtResource("1_tai8l")
@@ -117,3 +145,17 @@ texture = ExtResource("1_k3ug5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimator" unique_id=97883533]
 libraries/ = SubResource("AnimationLibrary_gymyn")
+
+[node name="SwordSlash" type="Sprite2D" parent="." unique_id=256171624]
+position = Vector2(434.00003, 189)
+scale = Vector2(0.5509091, 0.635)
+texture = ExtResource("15_akfvt")
+
+[node name="Area2D" type="Area2D" parent="SwordSlash" unique_id=296397781]
+position = Vector2(-787.7888, -297.63782)
+scale = Vector2(1.8151815, 1.5748032)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordSlash/Area2D" unique_id=915967305]
+position = Vector2(441.99997, 199.5)
+scale = Vector2(0.5509091, 0.635)
+shape = SubResource("RectangleShape2D_ubqdv")
