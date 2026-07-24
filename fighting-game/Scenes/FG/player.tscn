@@ -42,8 +42,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_j2gsv"]
 resource_name = "knight_attack"
-length = 0.7
-loop_mode = 1
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -51,7 +50,7 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.033333335, 0.1, 0.23333333, 0.36666667, 0.5, 0.6),
+"times": PackedFloat32Array(-0.03333333, 0.06666667, 0.16666667, 0.26666668, 0.36666667, 0.43333334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("4_w8wgg"), ExtResource("5_4bvnc"), ExtResource("6_nd763"), ExtResource("7_w7y1f"), ExtResource("8_uuhd0"), ExtResource("9_6rwnm")]
@@ -117,13 +116,14 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubqdv"]
-size = Vector2(464.6865, 152.75592)
+size = Vector2(480.7884, 152.75592)
 
-[node name="Knight" type="CharacterBody2D" unique_id=828705993 node_paths=PackedStringArray("camera")]
+[node name="Knight" type="CharacterBody2D" unique_id=828705993 node_paths=PackedStringArray("camera", "sword_slash")]
 script = ExtResource("1_tai8l")
 speed = 30.0
 jump_power = 70.0
 camera = NodePath("Camera2D")
+sword_slash = NodePath("SwordSlash")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=986295408]
 position = Vector2(268, 171)
@@ -147,15 +147,19 @@ texture = ExtResource("1_k3ug5")
 libraries/ = SubResource("AnimationLibrary_gymyn")
 
 [node name="SwordSlash" type="Sprite2D" parent="." unique_id=256171624]
-position = Vector2(434.00003, 189)
-scale = Vector2(0.5509091, 0.635)
+auto_translate_mode = 1
+visible = false
+position = Vector2(265.00006, 195)
+scale = Vector2(0.55545455, 0.63499993)
 texture = ExtResource("15_akfvt")
+region_enabled = true
+region_rect = Rect2(-567.21313, 0, 1117.2131, 400)
 
 [node name="Area2D" type="Area2D" parent="SwordSlash" unique_id=296397781]
 position = Vector2(-787.7888, -297.63782)
 scale = Vector2(1.8151815, 1.5748032)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordSlash/Area2D" unique_id=915967305]
-position = Vector2(441.99997, 199.5)
-scale = Vector2(0.5509091, 0.635)
+position = Vector2(613.51874, 198.00003)
+scale = Vector2(0.55090916, 0.635)
 shape = SubResource("RectangleShape2D_ubqdv")

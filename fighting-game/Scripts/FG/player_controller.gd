@@ -3,15 +3,21 @@ class_name PlayerController
 @export var speed = 10.0
 @export var jump_power = 50.0
 @export var camera : Camera2D
-
+@export var sword_slash : Sprite2D
 var speed_multiplier = 30.0
 var jump_multiplier = -30.0
 var direction = 0
+
+var is_attacking = false
 
 func _input(event):
 	# Handle jump.
 	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jump_power * jump_multiplier
+	
+	if event.is_action_pressed("attack"):
+		is_attacking = true
+		sword_slash.visible = true
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
