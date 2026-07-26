@@ -21,6 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://p7o8jvebt14q" path="res://Art/FG/Knight/walk/Knight_walk_05.png" id="11_fd4e3"]
 [ext_resource type="Texture2D" uid="uid://bjywftlu5a6pl" path="res://Art/FG/Knight/walk/Knight_walk_06.png" id="12_qqcod"]
 [ext_resource type="Texture2D" uid="uid://dyuk3k4tsnq0u" path="res://Art/FG/Knight/slash_effect/File1.png" id="15_akfvt"]
+[ext_resource type="Texture2D" uid="uid://ditx83ripx52c" path="res://Art/FG/Knight/slash_effect/File2.png" id="22_uuhd0"]
+[ext_resource type="Texture2D" uid="uid://n72iky74cf0f" path="res://Art/FG/Knight/slash_effect/File3.png" id="23_6rwnm"]
+[ext_resource type="Texture2D" uid="uid://dbbd4cvln6jm8" path="res://Art/FG/Knight/slash_effect/File4.png" id="24_j2gsv"]
+[ext_resource type="Texture2D" uid="uid://dj3nfy4h41ifm" path="res://Art/FG/Knight/slash_effect/File5.png" id="25_rlgve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tai8l"]
 size = Vector2(121, 151)
@@ -42,7 +46,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_j2gsv"]
 resource_name = "knight_attack"
-length = 0.5
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -50,7 +54,7 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.03333333, 0.06666667, 0.16666667, 0.26666668, 0.36666667, 0.43333334),
+"times": PackedFloat32Array(-0.03333333, 0, 0.06666667, 0.13333334, 0.2, 0.26666668),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("4_w8wgg"), ExtResource("5_4bvnc"), ExtResource("6_nd763"), ExtResource("7_w7y1f"), ExtResource("8_uuhd0"), ExtResource("9_6rwnm")]
@@ -118,6 +122,44 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubqdv"]
 size = Vector2(480.7884, 152.75592)
 
+[sub_resource type="Animation" id="Animation_nfmbf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_akfvt")]
+}
+
+[sub_resource type="Animation" id="Animation_feh4j"]
+resource_name = "slash"
+length = 0.26666668
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0557943, 0.11255057, 0.16161108, 0.2164434),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("15_akfvt"), ExtResource("22_uuhd0"), ExtResource("23_6rwnm"), ExtResource("24_j2gsv"), ExtResource("25_rlgve")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d2srl"]
+_data = {
+&"RESET": SubResource("Animation_nfmbf"),
+&"slash": SubResource("Animation_feh4j")
+}
+
 [node name="Knight" type="CharacterBody2D" unique_id=828705993 node_paths=PackedStringArray("camera", "sword_slash")]
 script = ExtResource("1_tai8l")
 speed = 30.0
@@ -150,7 +192,7 @@ libraries/ = SubResource("AnimationLibrary_gymyn")
 auto_translate_mode = 1
 visible = false
 position = Vector2(265.00006, 195)
-scale = Vector2(0.55545455, 0.63499993)
+scale = Vector2(0.5554545, 0.6349999)
 texture = ExtResource("15_akfvt")
 region_enabled = true
 region_rect = Rect2(-567.21313, 0, 1117.2131, 400)
@@ -163,3 +205,7 @@ scale = Vector2(1.8151815, 1.5748032)
 position = Vector2(613.51874, 198.00003)
 scale = Vector2(0.55090916, 0.635)
 shape = SubResource("RectangleShape2D_ubqdv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SwordSlash" unique_id=776052480]
+libraries/ = SubResource("AnimationLibrary_d2srl")
+autoplay = &"slash"
